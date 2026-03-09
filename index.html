@@ -437,7 +437,42 @@
             font-size: 2rem;
             margin-right: 10px;
         }
+        /* --- Parking Table Styles --- */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 20px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 600px;
+        }
+
+        th {
+            background: var(--bg-soft-grey);
+            text-align: left;
+            padding: 12px 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
         /* Footer */
         footer {
             background-color: var(--charcoal);
@@ -908,6 +943,7 @@
 </body>
 
 </html>
+
 
 
 
