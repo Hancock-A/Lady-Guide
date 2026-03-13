@@ -12,10 +12,6 @@
             --charcoal: #333333;
             --shadow: rgba(0, 0, 0, 0.1);
             --shadow-hover: rgba(0, 0, 0, 0.15);
-            --border-color: #e2e8f0;
-            --bg-soft-grey: #f8fafc;
-            --text-dark: #1e293b;
-            --text-muted: #475569;
         }
 
         /* Reset and Base Styles */
@@ -404,6 +400,25 @@
             font-size: 1.3rem;
         }
 
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            section h3 {
+                font-size: 1.5rem;
+            }
+        }
+
         /* Info Box */
         .info-box {
             background-color: #f8f9fa;
@@ -417,12 +432,12 @@
             color: var(--burnt-orange);
         }
 
+        /* Appliance Icons */
         .appliance-icon {
             font-size: 2rem;
             margin-right: 10px;
         }
-
-        /* Parking Table Styles */
+        /* --- Parking Table Styles --- */
         .table-container {
             width: 100%;
             overflow-x: auto;
@@ -458,7 +473,7 @@
         tr:last-child td {
             border-bottom: none;
         }
-
+        /* Footer */
         footer {
             background-color: var(--charcoal);
             color: var(--cream);
@@ -466,21 +481,16 @@
             padding: 20px;
             margin-top: 40px;
         }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero .subtitle { font-size: 1.2rem; }
-            section h2 { font-size: 2rem; }
-            section h3 { font-size: 1.5rem; }
-        }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="nav-bar">
         <a href="#home" class="home-icon" aria-label="Home">🏠</a>
         <button class="hamburger" aria-label="Menu" id="hamburger">☰</button>
     </nav>
 
+    <!-- Navigation Menu -->
     <div class="nav-menu" id="navMenu">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -492,9 +502,12 @@
         </ul>
     </div>
 
+    <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
+    <!-- Main Content -->
     <main>
+        <!-- Home Section -->
         <section id="home">
             <div class="container">
                 <div class="hero">
@@ -505,6 +518,7 @@
             </div>
         </section>
 
+        <!-- Lady Section -->
         <section id="lady">
             <div class="container">
                 <h2>🐈 The Protagonist: Lady</h2>
@@ -583,28 +597,35 @@
             </div>
         </section>
 
+        <!-- The Manor Section -->
         <section id="manor">
             <div class="container">
                 <h2>🏛️ The Manor: The Domestic Arts</h2>
                 <p style="text-align: center; font-style: italic; margin-bottom: 30px;">A comprehensive guide to the various mechanical wonders within these walls.</p>
 
+                <!-- WiFi Info -->
                 <div class="callout">
                     <h4>📶 WiFi Information</h4>
                     <p><strong>Network:</strong> ToastPoints Guest</p>
                     <p><strong>Password:</strong> ijustfarted</p>
                 </div>
 
+                <!-- TV Card -->
                 <div class="card">
                     <h3><span class="appliance-icon">📺</span>Roku TV</h3>
+                    
                     <h4>The Power</h4>
                     <p>Press the red button. It's the "Open Sesame" of our era.</p>
+                    
                     <h4>The Navigation</h4>
-                    <p>The Home button (house icon) is your anchor. Use the purple Directional Pad to move and the center OK button to select.</p>
+                    <p>The Home button (the house icon) is your anchor. Press it to see the grid of apps. Use the purple Directional Pad to move through the selections and the center OK button to dive in.</p>
+                    
                     <h4>The Volume (The Secret!)</h4>
-                    <p>The volume buttons are located on the <strong>right side</strong> of the remote. There is an Up, a Down, and a Mute.</p>
+                    <p>The volume buttons are located on the <strong>right side</strong> of the remote. There is an Up, a Down, and a Mute. They are quite tactical, yet easy to miss!</p>
                     
                     <div class="highlight">
                         <h4>📺 Available Subscriptions</h4>
+                        <p>All accounts are logged in and ready for your viewing pleasure:</p>
                         <ul>
                             <li>Netflix</li>
                             <li>Prime Video</li>
@@ -613,124 +634,260 @@
                             <li>Sling (CNN, HGTV, etc)</li>
                         </ul>
                     </div>
+
+                    <h4>Local Lore</h4>
+                    <p>Select the "Live TV" tile or use shortcut "1" for local CBS, ABC, and NBC.</p>
+                    
                     <div class="highlight">
                         <h4>📝 Closed Captions (CC)</h4>
-                        <p>Press <strong>"2"</strong> for captions, or the <strong>"*" (Star)</strong> button for the menu during the show.</p>
+                        <p>Press <strong>"2"</strong> for closed captions, or the <strong>"*" (Star)</strong> button for a menu during the show.</p>
+                        <p>If that fails, click the <strong>Down Arrow</strong> during playback—it varies by app, which is simply disappointing, but persistence is key!</p>
                     </div>
                 </div>
 
+                <!-- Coffee Machine - Two Cards -->
                 <div class="grid">
                     <div class="card">
                         <h3><span class="appliance-icon">☕</span>Espresso</h3>
+                        <h4>Basic Operation</h4>
                         <ol>
-                            <li>Ensure water and beans are ready</li>
-                            <li>Place mug under spout</li>
-                            <li>Press espresso button</li>
+                            <li>Ensure the water tank is full and there are beans in the hopper</li>
+                            <li>Place your mug under the spout</li>
+                            <li>Press the espresso button</li>
+                            <li>Await your liquid motivation</li>
                         </ol>
+                        <div class="info-box">
+                            <strong>Maintenance:</strong> If a red light blinks, the machine is parched or full. Empty the grounds bin and drip tray.
+                        </div>
                     </div>
+
                     <div class="card">
                         <h3><span class="appliance-icon">☕</span>Milky Drinks</h3>
+                        <h4>Using the Milk Carafe</h4>
                         <ol>
-                            <li>Add only needed milk to carafe</li>
-                            <li>Attach to machine</li>
-                            <li>Press beverage button</li>
-                            <li><strong>Rinse carafe immediately</strong></li>
+                            <li>Add only the milk you need for <strong>one</strong> drink into the carafe</li>
+                            <li>Attach the carafe to the machine</li>
+                            <li>Press your desired milky beverage button</li>
+                            <li>Brew and enjoy</li>
+                            <li><strong>Immediately</strong> rinse the carafe after use</li>
                         </ol>
+                        <div class="info-box">
+                            <strong>Important:</strong> To avoid disappointment when it's time for your next hot beverage, rinse after each use.
+                        </div>
                     </div>
                 </div>
 
+                <!-- Washer & Dryer -->
                 <div class="grid">
                     <div class="card">
                         <h3><span class="appliance-icon">🧺</span>Washer</h3>
-                        <p>Detergent goes directly in the drum. Set to 'Permanent Press' and start.</p>
+                        <ol>
+                            <li>Place liquid detergent directly in the drum</li>
+                            <li>Load your laundry</li>
+                            <li>Set to <strong>'Permanent Press'</strong> or <strong>'Heavy Duty'</strong></li>
+                            <li>Press Start</li>
+                        </ol>
                     </div>
+
                     <div class="card">
                         <h3><span class="appliance-icon">🧺</span>Dryer</h3>
-                        <p><strong>Clean lint screen</strong> every load. Set to 'Easy Care' and start.</p>
+                        <ol>
+                            <li><strong>Clean the lint screen</strong> before <em>every</em> load</li>
+                            <li>Transfer clothes from washer</li>
+                            <li>Set to <strong>'Easy Care'</strong> or <strong>'Cottons'</strong></li>
+                            <li>Press Start</li>
+                        </ol>
                     </div>
                 </div>
 
+                <!-- Dishwasher -->
                 <div class="card">
-                    <h3>🚗 Parking Information</h3>
-                    <p><strong>Your assigned spot:</strong> G</p>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Booking #</th>
-                                    <th>Duration</th>
-                                    <th>Validity Dates</th>
-                                    <th>Spot</th>
-                                    <th>Confirmed At</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>64706</td><td>72 hrs</td><td>16-Mar – 19-Mar</td><td>G</td><td>03:55 PM, 23-Feb-2026</td></tr>
-                                <tr><td>64707</td><td>72 hrs</td><td>19-Mar – 22-Mar</td><td>G</td><td>03:55 PM, 23-Feb-2026</td></tr>
-                                <tr><td>64709</td><td>72 hrs</td><td>22-Mar – 25-Mar</td><td>G</td><td>03:55 PM, 23-Feb-2026</td></tr>
-                                <tr><td>64710</td><td>48 hrs</td><td>25-Mar – 27-Mar</td><td>G</td><td>03:55 PM, 23-Feb-2026</td></tr>
-                            </tbody>
-                        </table>
+                    <h3><span class="appliance-icon">🍽️</span>Dishwasher</h3>
+                    <p>Pods are located in the box under the sink - lower right.</p>
+                    <ol>
+                        <li>Load dishes (Lady's plates go on the lower rack)</li>
+                        <li>Add a detergent pod to the dispenser</li>
+                        <li>Close the door</li>
+                        <li>Press 'Start'</li>
+                    </ol>
+                    <div class="warning">
+                        <h4>⚠️ Crucial Detail</h4>
+                        <p>If you open the door mid-cycle, you <strong>must</strong> press 'Start' again, or the machine will simply give up on life.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+
+                <!-- Vacuum -->
+                <div class="card">
+                    <h3><span class="appliance-icon">🧹</span>The Hoover (The Fur-Finder)</h3>
+                    <p><strong>Location:</strong> Office closet, mounted on the wall</p>
+                    
+                    <h4>Operation</h4>
+                    <ol>
+                        <li>Lift off the wall mount</li>
+                        <li>Press the 'On' button</li>
+                        <li>Vacuum as needed</li>
+                        <li>Press 'Off' when finished</li>
+                    </ol>
+                    
+                    <h4>Emptying the Tank</h4>
+                    <p>Press the tank release button. Empty contents into trash.</p>
+                    
+                    <h4>Charging</h4>
+                    <p>Return the vacuum to its wall-mounted perch; It will charge automatically.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚗 Parking Reminder</h3>
+                    <p><strong>Your assigned spot:</strong> G</p>
+                    <p>If a trespasser is in your spot, park adjacent and notify the leasing office or security patrol.</p>
+                </div>
+        <!-- Parking Booking Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking #</th>
+                        <th>Duration</th>
+                        <th>Validity Dates</th>
+                        <th>Spot</th>
+                        <th>Confirmed At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>64706</td>
+                        <td>72 hrs</td>
+                        <td>16-Mar – 19-Mar</td>
+                        <td>G</td>
+                        <td>03:55 PM, 23-Feb-2026</td>
+                    </tr>
+                    <tr>
+                        <td>64707</td>
+                        <td>72 hrs</td>
+                        <td>19-Mar – 22-Mar</td>
+                        <td>G</td>
+                        <td>03:55 PM, 23-Feb-2026</td>
+                    </tr>
+                    <tr>
+                        <td>64709</td>
+                        <td>72 hrs</td>
+                        <td>22-Mar – 25-Mar</td>
+                        <td>G</td>
+                        <td>03:55 PM, 23-Feb-2026</td>
+                    </tr>
+                    <tr>
+                        <td>64710</td>
+                        <td>48 hrs</td>
+                        <td>25-Mar – 27-Mar</td>
+                        <td>G</td>
+                        <td>03:55 PM, 23-Feb-2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
         
+        <!-- The Rules Section -->
         <section id="rules">
             <div class="container">
                 <h2>⚠️ The Rules</h2>
+                <p style="text-align: center; font-style: italic; margin-bottom: 30px;">For the safety and sanity of all involved, please observe these sacred decrees.</p>
+
                 <div class="grid">
                     <div class="warning">
                         <h4>🚪 The Forbidden Closets</h4>
-                        <p>Keep the <strong>office bathroom</strong>, <strong>laundry</strong>, and <strong>office</strong> closets closed at all times.</p>
+                        <p>Keep the <strong>office bathroom</strong> , and  <strong>laundry</strong> and <strong>office</strong> closets closed at all times.</p>
+                        <p>We don't want Lady "folding" herself into the washer or staging a supply closet intervention.</p>
                     </div>
+
                     <div class="warning">
                         <h4>🌿 The Balcony</h4>
-                        <p><strong>Supervised visits only!</strong> Close the door immediately if she prepares for a leap.</p>
+                        <p><strong>Supervised visits only!</strong></p>
+                        <p>If she looks like she's preparing for a daring leap (the 'pre-pounce' stance), the show is over. Close the door immediately.</p>
+                        <p>Lady is an indoor cat with delusions of parkour grandeur.</p>
                     </div>
+                </div>
+
+                <div class="card">
+                    <h3>🚫 The Forbidden List</h3>
+                    <p>Items and areas that are strictly off-limits to Lady:</p>
+                    <ul>
+                        <li><strong>Closets:</strong> Laundry and office closets must remain closed</li>
+                        <li><strong>Office Bathroom:</strong> Weirdly obsessed with opening drawers</li>
+                        <li><strong>Unsupervised Balcony Access:</strong> She's convinced she can fly</li>
+                        <li><strong>Human Food:</strong> Lady's dietary requirements are strict and fancy</li>
+                        <li><strong>Plastic Bags:</strong> A choking hazard disguised as a toy</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- The Exit Section -->
         <section id="exit">
             <div class="container">
                 <h2>🚪 The Exit: Departure Day</h2>
+                <p style="text-align: center; font-style: italic; margin-bottom: 30px;">As all good things must come to an end, here is your graceful departure checklist.</p>
+
                 <div class="card">
+                    <h3>Final Walkthrough</h3>
                     <ul class="checklist">
-                        <li>Lady fed her morning meal</li>
-                        <li>Fresh water topped off</li>
-                        <li>Windows/Balcony closed</li>
-                        <li>Closets closed</li>
+                        <li>Lady has been fed her morning meal</li>
+                        <li>Fresh water is available</li>
+                        <li>Windows and balcony door are closed</li>
+                        <li>Laundry and office closets are closed</li>
                     </ul>
                 </div>
+
                 <div class="callout">
                     <h4>🔑 The Final Act</h4>
                     <p style="font-size: 1.3rem;">Please leave the <strong>garage key fob on the kitchen island</strong>.</p>
                 </div>
+
+                <div class="hero" style="padding: 40px 0;">
+                    <h3 style="color: var(--burnt-orange);">Thank You!</h3>
+                    <p>Lady appreciates your service, though she may never admit it. You have been a wonderful caretaker, and we are most grateful for your dedication to her highness.</p>
+                    <p style="font-style: italic; margin-top: 20px;">"One must admire the dedication of a good staff." — Lady (probably)</p>
+                </div>
             </div>
         </section>
 
+        <!-- Contacts Section -->
         <section id="contacts">
             <div class="container">
                 <h2>📞 Contacts</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Quick access to important numbers. Tap to call on mobile devices.</p>
+
                 <div class="grid">
                     <div class="contact-card">
                         <h3>🏥 Lyndale Animal Hospital</h3>
+                        <p style="font-style: italic; color: #666;">(Regular Vet - Non-Emergency)</p>
                         <p class="phone">+1 (612) 872-4674</p>
                         <a href="tel:+16128724674" class="call-button">Call Now</a>
                     </div>
+
                     <div class="contact-card">
-                        <h3>🚨 Allied Vet Emergency</h3>
+                        <h3>🚨 Allied Veterinary Emergency</h3>
+                        <p style="font-style: italic; color: #666;">(Emergency & Referral)</p>
                         <p class="phone">+1 (952) 521-3030</p>
+                        <p class="address">5754 Nicollet Ave S<br>Minneapolis, MN 55419</p>
+                        <p class="website"><a href="https://www.alliedervet.com/locations/minneapolis/" target="_blank">alliedervet.com/locations/minneapolis</a></p>
                         <a href="tel:+19525213030" class="call-button">Call Now</a>
                     </div>
+
                     <div class="contact-card">
                         <h3>🏢 Inspire Apartments</h3>
                         <p class="phone">+1 (612) 712-5644</p>
+                        <p style="margin: 15px 0;">
+                            <strong>Press 3:</strong> Maintenance Emergency<br>
+                            <strong>Press 4:</strong> Security Patrol
+                        </p>
                         <a href="tel:+16127125644" class="call-button">Call Now</a>
                     </div>
+
                     <div class="contact-card">
                         <h3>🥡 China Moon</h3>
+                        <p style="font-style: italic; color: #666;">(Chinese Takeaway Down the Street)</p>
                         <p class="phone">+1 (612) 823-1888</p>
                         <a href="tel:+16128231888" class="call-button">Call Now</a>
                     </div>
@@ -739,43 +896,63 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Lady's Manor.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
+        // Get elements
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
         const overlay = document.getElementById('overlay');
         const navLinks = document.querySelectorAll('.nav-menu a');
+        const homeIcon = document.querySelector('.home-icon');
 
+        // Toggle menu
         function toggleMenu() {
             navMenu.classList.toggle('active');
             overlay.classList.toggle('active');
         }
 
+        // Close menu
         function closeMenu() {
             navMenu.classList.remove('active');
             overlay.classList.remove('active');
         }
 
+        // Event listeners
         hamburger.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', closeMenu);
-        navLinks.forEach(link => link.addEventListener('click', closeMenu));
 
+        // Close menu when clicking a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Smooth scroll for all navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+                    const offsetTop = target.offsetTop - 60; // Account for fixed nav height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
 
+        // Close menu when pressing Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
         });
     </script>
 </body>
+
 </html>
